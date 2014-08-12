@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>WebIOPi | Light Control</title>
+        <script type="text/javascript" src="/webiopi.js"></script>
+        <script type="text/javascript">
+        webiopi().ready(function() {
+                var button1;
+                // Create a "Light" labeled button for GPIO 10
+                button1 = webiopi().createGPIOButton(10, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button1);
+
+                var button2;
+                // Create a "Light" labeled button for GPIO 9
+                button2 = webiopi().createGPIOButton(9, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button2);
+
+                var button3;
+                // Create a "Light" labeled button for GPIO 11
+                button3 = webiopi().createGPIOButton(11, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button3);
+
+                var button4;
+                // Create a "Light" labeled button for GPIO 10
+                button4 = webiopi().createGPIOButton(25, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button4);
+
+                var button5;
+                // Create a "Light" labeled button for GPIO 9
+                button5 = webiopi().createGPIOButton(8, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button5);
+
+                var button6;
+                // Create a "Light" labeled button for GPIO 11
+                button6 = webiopi().createGPIOButton(7, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button6);
+
+
+                var button7;
+                // Create a "Light" labeled button for GPIO 11
+                button7 = webiopi().createGPIOButton(24, "");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button7);
+
+                // Refresh GPIO buttons
+                // pass true to refresh repeatedly of false to refresh once
+                webiopi().refreshGPIO(true);
+        });
+                
+        </script>
+        <style type="text/css">
+                button {
+                  content:'';
+                  display:block;
+                  height:100px;
+                  width:100px;
+                  border-radius:100%;
+                  background :white;
+                  margin:auto;
+                  position:absolute;
+                }
+
+                #gpio10 {
+                  margin-left:50px;
+                  margin-top:50px;                
+                }
+                #gpio10.LOW {
+                  background : red;
+                  transition:1s;
+                }
+                
+                #gpio10.HIGH {
+                  box-shadow:0 0 50px red,0 0 150px red, inset 0 20px 20px 40px red, inset 30px 0 35px 50px red;
+                  transition:1s;
+                }
+
+                #gpio9 {
+                  margin-left:50px;
+                  margin-top:150px;                
+                }
+                #gpio9.LOW {
+                  background : orange;
+                  transition:1s;
+                }
+                
+                #gpio9.HIGH {
+                  box-shadow:0 0 50px orange,0 0 150px orange, inset 0 20px 20px 40px orange, inset 30px 0 35px 50px orange;
+                  transition:1s;
+                }
+
+                #gpio11 {
+                  margin-left:50px;
+                  margin-top:250px;                
+                }
+                #gpio11.LOW {
+                  background : green;
+                  transition:1s;
+                }
+                
+                #gpio11.HIGH {
+                  box-shadow:0 0 50px green,0 0 150px green, inset 0 20px 20px 40px green, inset 30px 0 35px 50px green;
+                  transition:1s;
+                }
+
+
+
+
+                #gpio25 {
+                  margin-left:250px;
+                  margin-top:50px;                
+                }
+                #gpio25.LOW {
+                  background : red;
+                  transition:1s;
+                }
+                
+                #gpio25.HIGH {
+                  box-shadow:0 0 50px red,0 0 150px red, inset 0 20px 20px 40px red, inset 30px 0 35px 50px red;
+                  transition:1s;
+                }
+
+                #gpio8 {
+                  margin-left:250px;
+                  margin-top:150px;                
+                }
+                #gpio8.LOW {
+                  background : orange;
+                  transition:1s;
+                }
+                
+                #gpio8.HIGH {
+                  box-shadow:0 0 50px orange,0 0 150px orange, inset 0 20px 20px 40px orange, inset 30px 0 35px 50px orange;
+                  transition:1s;
+                }
+
+                #gpio7 {
+                  margin-left:250px;
+                  margin-top:250px;                
+                }
+                #gpio7.LOW {
+                  background : green;
+                  transition:1s;
+                }
+                
+                #gpio7.HIGH {
+                  box-shadow:0 0 50px green,0 0 150px green, inset 0 20px 20px 40px green, inset 30px 0 35px 50px green;
+                  transition:1s;
+                }
+
+                #gpio24 {
+                  margin-left:250px;
+                  margin-top:350px;                
+                }
+                #gpio24.LOW {
+                  background : green;
+                  transition:1s;
+                }
+                
+                #gpio24.HIGH {
+                  box-shadow:0 0 50px green,0 0 150px green, inset 0 20px 20px 40px green, inset 30px 0 35px 50px green;
+                  transition:1s;
+                }
+        </style>
+</head>
+<body>
+    <div id="controls" align="center"></div>
+</body>
+</html>

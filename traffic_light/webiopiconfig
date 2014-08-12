@@ -1,0 +1,17 @@
+[GPIO]
+10 = OUT 0
+9 = OUT 0
+11 = OUT 0
+
+[SCRIPTS]
+#myscript = /home/pi/traffic_light/TrafficLight.py
+
+[HTTP]
+enabled = true
+port = 8000
+
+passwd-file = /etc/webiopi/passwd
+
+prompt = "WebIOPi"
+
+doc-root = /home/pi/traffic_light
