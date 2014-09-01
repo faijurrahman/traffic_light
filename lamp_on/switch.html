@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>WebIOPi | Light Control</title>
+        <script type="text/javascript" src="/webiopi.js"></script>
+        <script type="text/javascript">
+        webiopi().ready(function() {
+                var lampswitch;
+                // Create a "Light" labeled button for GPIO 18
+                lampswitch = webiopi().createGPIOButton(18, "LAMP");
+
+                // Append button to HTML element with ID="controls" using jQuery
+                $("#control").append(lampswitch);
+
+                // Refresh GPIO buttons
+                // pass true to refresh repeatedly of false to refresh once
+                webiopi().refreshGPIO(true);
+        });
+                
+        </script>
+        <style type="text/css">
+                #gpio18 {
+                    display: block;
+                    margin: 5px 5px 5px 5px;
+                    width: 160px;
+                    height: 45px;
+                    font-size: 24pt;
+                    font-weight: bold;
+                    color: black;
+                }
+                #gpio18.LOW {
+                        background-color: White;
+                }
+                
+                #gpio18.HIGH {
+                        background-color: Red;
+                }
+
+
+
+        </style>
+</head>
+<body>
+
+
+        <div id="control"></div>
+
+</body>
+</html>
+

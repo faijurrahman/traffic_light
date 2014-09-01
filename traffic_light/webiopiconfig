@@ -2,9 +2,13 @@
 10 = OUT 0
 9 = OUT 0
 11 = OUT 0
+25 = OUT 0
+7 = OUT 0
+24 = OUT 0
+8 = OUT 0
 
 [SCRIPTS]
-#myscript = /home/pi/traffic_light/TrafficLight.py
+#myscript = /home/pi/rasplay/script.py
 
 [HTTP]
 enabled = true
@@ -15,3 +19,13 @@ passwd-file = /etc/webiopi/passwd
 prompt = "WebIOPi"
 
 doc-root = /home/pi/rasplay
+
+[COAP]
+# CoAP Server configuration
+enabled = false
+port = 5683
+# Enable CoAP multicast
+multicast = false
+
+[DEVICES]
+#serial0 = Serial device:ttyAMA0 baudrate:9600

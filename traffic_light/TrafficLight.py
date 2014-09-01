@@ -15,13 +15,13 @@ class TrafficLight:
 
     def startTrafficLight(self):
         for led in self.ledList:
-            #print ('startTrafficLight %s led off status : %d' % (led.ledName, led.ledStatus))
+            print ('startTrafficLight %s led off status : %d' % (led.ledName, led.ledStatus))
             led.poweredTurnOffLed()
 
         for led in self.ledList:
             led.turnOnLedAndAutoOff()
             while led.ledStatus != 0:
-                #print ('startTrafficLight %s led run status : %d' % (led.ledName, led.ledStatus))
+                print ('startTrafficLight %s led run status : %d' % (led.ledName, led.ledStatus))
                 time.sleep(1)
 
 class Led:
@@ -109,21 +109,21 @@ if __name__ == "__main__":
 
     trafficlight = TrafficLight()
     # Adding RedLed
-    trafficlight.addLed('Red', 10, 10, status_blink=True)
+    trafficlight.addLed('Red', 10, 10, status_blink=False)
     # Adding GreenLed
-    trafficlight.addLed('Green', 11, 5, status_blink=True)
+    trafficlight.addLed('Green', 11, 5, status_blink=False)
     # Adding YellowLed
-    trafficlight.addLed('Yellow', 9, 2, status_blink=True)
+    trafficlight.addLed('Yellow', 9, 2, status_blink=False)
 
     trafficlight2 = TrafficLight()
     # Adding RedLed
-    trafficlight2.addLed('Red', 25, 10, status_blink=True)
+    trafficlight2.addLed('Red', 25, 10, status_blink=False)
     # Adding GreenLed
-    trafficlight2.addLed('Green', 7, 5, status_blink=True)
+    trafficlight2.addLed('Green', 7, 5, status_blink=False)
     # Adding GreenLed
-    trafficlight2.addLed('Green2', 24, 5, status_blink=True)
+    trafficlight2.addLed('Green2', 24, 5, status_blink=False)
     # Adding YellowLed
-    trafficlight2.addLed('Yellow', 8, 2, status_blink=True)
+    trafficlight2.addLed('Yellow', 8, 2, status_blink=False)
 
     while True:
         trafficlight.startTrafficLight()
