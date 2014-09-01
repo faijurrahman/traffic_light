@@ -14,4 +14,4 @@ passwd-file = /etc/webiopi/passwd
 
 prompt = "WebIOPi"
 
-doc-root = /home/pi/traffic_light
+doc-root = /home/pi/rasplay
