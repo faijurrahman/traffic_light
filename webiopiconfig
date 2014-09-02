@@ -6,6 +6,7 @@
 7 = OUT 0
 24 = OUT 0
 8 = OUT 0
+18 = OUT 0
 
 [SCRIPTS]
 #myscript = /home/pi/rasplay/script.py
@@ -19,13 +20,3 @@ passwd-file = /etc/webiopi/passwd
 prompt = "WebIOPi"
 
 doc-root = /home/pi/rasplay
-
-[COAP]
-# CoAP Server configuration
-enabled = false
-port = 5683
-# Enable CoAP multicast
-multicast = false
-
-[DEVICES]
-#serial0 = Serial device:ttyAMA0 baudrate:9600
