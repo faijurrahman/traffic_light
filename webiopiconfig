@@ -9,7 +9,7 @@
 18 = OUT 0
 
 [SCRIPTS]
-#myscript = /home/pi/rasplay/script.py
+#myscript = /home/pi/traffic_light/script.py
 
 [HTTP]
 enabled = true
@@ -19,4 +19,4 @@ passwd-file = /etc/webiopi/passwd
 
 prompt = "WebIOPi"
 
-doc-root = /home/pi/rasplay
+doc-root = /home/pi/traffic_light
